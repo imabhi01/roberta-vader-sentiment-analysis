@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python</title>
+</head>
+<body>
+    <h1>Sentiment Analysis Prediction for Drug Reviews</h1>
+    <section>
+        <div class="row">
+            <form action="{% url 'result' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <textarea name="reviewText" rows="10" cols="50"></textarea>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+</body>
+</html>

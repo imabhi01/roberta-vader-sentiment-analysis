@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <section>
+        <div id="result">
+            {% if sentiments %}
+                <h2>Sentiment Analysis Results:</h2>
+                <ul>
+                    <li>Linear SVC: {{ sentiments.Linear_SVC }}</li>
+                    <li>Logistic Regression: {{ sentiments.Logistic_Regression }}</li>
+                    <li>Decision Tree: {{ sentiments.Decision_Tree }}</li>
+                    <li>Naive Bayes: {{ sentiments.Multinomial_NaiveBayes }}</li>
+                    <li>Random Forest: {{ sentiments.Random_Forest }}</li>
+                </ul>
+            {% endif %}
+        </div>
+    </section>
+</body>
+</html>
