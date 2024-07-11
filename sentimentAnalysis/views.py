@@ -32,18 +32,3 @@ def analyze(request):
         reviewText = request.POST['reviewText']
         sentiments = analyze_sentiment(reviewText)
     return render(request, 'result.html', {'sentiments': sentiments})
-
-    # vectorizer
-    # text = [review_text]
-
-    # vectorizedText = vectorizer.transform(text)
-
-    # prediction = LinearSVC.predict(vectorizedText)
-
-    # prediction_result = prediction[0]
-
-    # context = {
-    #     'prediction_result': prediction_result
-    # }
-
-    # return render(request, 'result.html', context)
